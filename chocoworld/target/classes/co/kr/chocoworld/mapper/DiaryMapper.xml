@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.kr.chocoworld.mapper.DiaryMapper">
+<select id="getList" resultType="co.kr.chocoworld.domain.DiaryVO">
+select * from diary order by dbno desc
+</select>
+
+<insert id="insert">
+insert into diary (dbno, title, content, writer)
+values(seq_diary.nextval, #{title}, #{content}, #{writer})
+</insert>
+
+<insert id="insertSelectKey">
+	<selectKey order="BEFORE" keyProperty="dbno" resultType="long">
+	select seq_diary.nextval from dual
+	</selectKey>
+	
+insert into diary (dbno, title, content, writer)
+values(#{dbno}, #{title}, #{content}, #{writer})
+</insert>
+	
+<select id="read" resultType="co.kr.chocoworld.domain.DiaryVO">
+	select* from diary where dbno=#{dbno}
+</select>	
+	</mapper>
