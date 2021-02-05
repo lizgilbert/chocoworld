@@ -5,10 +5,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
-
 <title>로그인창</title>
+<style>
+img {
+padding: 50px;
+}
+</style>
 </head>
+<body>
 <div>
   <form role="form" action="login"  method="post" >
   			<div>
@@ -20,13 +24,14 @@
 			</div>
 			<br>
 			
-			<button type="submit" class="btn btn-default">Submit Button</button>
-			<button type="reset" class="btn btn-default">Reset Button</button>
+			<button type="submit" class="btn btn-default">Submit</button>
+			<button type="reset" class="btn btn-default">Reset</button>
 		</form>
-  <br>
   <br>
  </div>  
  <div>
-  <button type="button"><a href="/register">새 회원 등록하기</a></button>
+  <button id="member_btn" type="button"><a href="/register">새 회원 등록하기</a></button>
  </div>
+ <img src="/resources/img/choco.gif" alt="choco" width="200">
+ </body>
 </html>

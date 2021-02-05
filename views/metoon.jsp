@@ -12,8 +12,9 @@
 	  html,body{width:100%;height:70%; }
       html{overflow-y:scroll}
       body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,button{margin:0;padding:0}
-      body,h1,h2,h3,h4,input,button{font-family:NanumGothicWeb,verdana,dotum, 
-                                             sans-serif;font-size:15px;color:#383d41}
+      body,h2,h3,h4,input,button{font-family:NanumGothicWeb,verdana,dotum, 
+                                             sans-serif;	font-size: 17px;
+color:#383d41}
 	  a{text-decoration:none}
 
 </style>

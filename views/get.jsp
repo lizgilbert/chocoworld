@@ -12,36 +12,29 @@
 <!-- Custom CSS -->
 <link href="/resources/css/sb-admin-2.css" rel="stylesheet">
 <style>
-* {
-	margin: 0px auto; padding: 0px; vertical-align: middle; text-align:center
-}
-	  html,body{width:100%;height:70%}
-      html{overflow-y:scroll}
-      body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,button{margin:0;padding:0}
-      body,h1,h2,h3,h4,input,button{font-family:NanumGothicWeb,verdana,dotum, 
-                                             sans-serif;font-size:15px;color:#383d41}
-	  a{text-decoration:none}
+
 
 </style>
 </head>
+<form id="get_diary">
           <div>
           <label>Bno</label> <input name='dbno'
-            value='<c:out value="${diary.dbno }"/>' readonly="readonly">
-        </div><br>
+            value='<c:out value="${diary.dbno }"/>'readonly="readonly"/>
+        </div>
 
    <div>          
    <label>Title</label> <input name='title'
-            value='<c:out value="${diary.title }"/>' readonly="readonly">
-        </div><br>
+            value='<c:out value="${diary.title }"/>' readonly="readonly"/>
 
         <div>
-          <label>Text area</label>
-          <textarea rows="3" name='content'
-            readonly="readonly"><c:out value="${diary.content}" /></textarea>
-        </div><br>
+         <!--  <label>Text area</label> -->
+          <textarea name='content'
+            readonly="readonly" style="background-color: #e5e0e6;"><c:out value="${diary.content}" /></textarea>
+        </div>
 
         <div>
           <label>Writer</label> <input name='writer'
-            value='<c:out value="${diary.writer }"/>' readonly="readonly">
-        </div><br>
+            value='<c:out value="${diary.writer }"/>' readonly="readonly"/>
+        </div>
+        </form>
 
